@@ -1,0 +1,25 @@
+body{
+    background-image: url("login_forma.jpg");
+    background-size: cover;
+}
+.text{
+    color:rgb(109, 127, 228);
+    font-size: 50px;
+    padding-top:10px;
+    padding-bottom:5px;
+    text-align: center;
+}
+.info{
+    color:black;
+}
+.form-group {
+    margin-top: 45px;
+    padding:90px;
+    background-color: white;
+    opacity:.8;
+}
+
+#button1{
+    margin-top:20px;
+}
+

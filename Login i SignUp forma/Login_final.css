@@ -1,0 +1,47 @@
+.card {
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-header {
+    background-color: #333;
+    color: #fff;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .form-control {
+    background-color: #f4f4f4;
+    border: none;
+    border-radius: 20px;
+    padding: 15px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .form-control:focus {
+    box-shadow: none;
+    border-color: #333;
+  }
+  
+  .btn-primary {
+    background-color: #333;
+    border: none;
+    border-radius: 20px;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  .btn-primary:hover, .btn-primary:focus {
+    background-color: #111;
+    outline: none;
+  }
+  
+  @media (max-width: 767px) {
+    .card {
+      margin-top: 20px;
+    }
+  }
+  
