@@ -1,0 +1,494 @@
+* {
+    margin: 0;  /* sve je do kraja zaslona*/
+    padding: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    color: black;
+    background-color: #595957;  /*PROMIIJENILA BOJU U TAMNIJU*/
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;  /* da nav i logo budu u nizu jedan do drugog, a ne jedan ispod drugog */
+    justify-content: center;  /*poravnato na sredinu oboje*/
+    flex-wrap: wrap;
+  }
+  
+  /* Header - nav i logo */
+  
+  header {
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    height: 69px;
+    background-color: /*#b2abb4*/ #595957;   /*PROMIJENILA BOJU*/
+    border-bottom: 1px solid seashell;
+    align-items: center; /*nav na sredini*/
+    
+   
+  }
+
+.logo {
+    width: 70px;
+    height: 50px;
+}
+  nav {
+      text-align: right;
+      flex-grow: 1; /* kad sam dodala ovo, nav zauzme vise prostora, naraste u odnosu na druge elemente pa pomakne logo na drugi kraj */
+      color:white;
+      
+  }
+nav span {
+    display: inline-block;
+    
+    list-style-type: none;
+    padding: 10px 20px;
+    margin: 10px;
+}
+
+ a {
+    text-decoration: none;
+    color: seashell;
+    
+    
+    
+}
+
+a.hover:hover {
+    background: white;
+    color: gray;
+}
+ /* LOGO */
+header img {
+    padding-left: 10px;  
+    
+    height: 50px;
+    margin: 10px;
+
+    
+    
+}
+
+@media only screen and (max-width: 480px) {
+    header {
+        width: 100%;
+        height: auto;
+    }
+    nav {
+        justify-content: center;
+        text-align: center;
+    }
+    nav span {
+        display:block;
+        
+        
+        list-style-type: none;
+        padding: 10px 10px;
+    }
+}
+@media only screen and (max-width: 768px) and (min-width: 605px){
+    header {
+        width: 100%;
+        height: auto;
+    }
+    nav {
+        justify-content: center;
+        text-align: center;
+    }
+    nav span {
+        display:block;
+        
+        
+        list-style-type: none;
+        padding: 10px 10px;
+    }
+}
+
+
+/*POCETNA POZADINA I NASLOV STRANICE*/ 
+
+.main {
+    width: /*1200px*/ 100%;
+    padding-top: 69px;
+    opacity: 0.9;
+  /* centers the content */
+  margin: auto;
+
+}
+
+/* za povijest.css*/
+.main-content {
+    margin: 0 auto; 
+    padding: 40px;
+    text-align: center;
+    width: 70%;
+    position: relative;
+    top: 170px;
+    
+    
+    
+  
+  }
+
+.welcome {
+    margin:auto;
+}
+
+
+/* POZADINA SLIKA  */
+
+#banner {
+    height: 600px;
+    background-image: url("images/frankreich-paris-eiffelturm-wasser.jpg");
+    background-size: cover;
+    background-position:center;
+    width: 100%;
+    
+    margin: auto;
+    
+    
+    
+    
+    
+   
+    
+    
+}
+
+/* BANNER CONTENT - NASLOV NA POCETNOJ POZADINI */
+
+#banner .content {
+    /* centrira sadrzaj unutar banner-a */
+    margin: auto;
+    background-color: /*#b2abb4*/ #595957;  /*PROMIJENILA BOJU*/
+    width: 100%;
+    align-items: center;
+    padding: 7px;
+    line-height:1.5;
+    text-align: center;
+    height: auto;
+    border: 4px solid white;
+    color: white;
+    
+    
+    
+    
+    
+
+}
+
+#uvod {
+    padding: 50px;
+    color: white;
+    padding-top: 90px;
+}
+
+#uvod p {
+    padding:10px;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+}
+
+
+/* nije bila vidljiva cijela slika kad se smanji rezolucija ekrana nego samo njen lijevi dio, sredeno preko media... */
+@media only screen and (max-width: 480px) {
+    .main {
+        width: 100%;
+        padding-top: 69px;
+        opacity: 0.9;
+        /* centers the content */
+        margin: auto;
+    
+    }
+}
+@media only screen and (max-width: 768px) {
+    .main {
+        width: 100%;  /* 100% sirine slike se vidi kad se smanji*/
+        padding-top: 69px;
+        opacity: 0.9;
+        /* centers the content */
+        margin: auto;
+    
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .main {
+        width: 100%;
+        padding-top: 69px;
+        opacity: 0.9;
+        /* centers the content */
+        margin: auto;
+    
+    }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1152px) {
+    .main {
+        width: 100%;
+        padding-top: 69px;
+      opacity: 0.9;
+      /* centrira sadrzaj */
+      margin: auto;
+    
+    }
+}
+
+/* ZA MOBITELE- kad se rezolucija skroz smanji pomakne se nav i li elementi - srediti preko media  */
+@media only screen and (max-width: 768px) {
+    header {
+        width: 100%;
+        height: auto;
+        flex-shrink: 2;
+    }
+    nav {
+        justify-content: center;
+        text-align: center;
+    }
+    nav span {
+        display:inline-block;
+        font-size: 17px;  /*smanjiti da svi stanu u isti red jedno do drugog inline block*/
+        
+        list-style-type: none;
+        padding: auto;
+    }
+    body {
+        font-size: 17px;  /*smanjiti naslov*/
+    }
+    
+}
+
+/* LOKACIJE U PARIZU */
+
+#lokacije {
+    max-width: 1000px;
+    color:white;
+    margin: auto;
+    padding-top: 50px;   /*malo pomaknuti naslov iz #lokacije od bannera*/
+    text-align: center;
+    
+    
+
+}
+
+/*provjera velicine browsera da nadem breakpointe za jako male velicine ekrana za mobitele*/
+@media only screen and (max-width: 315px) {
+    #lokacije {
+        max-width: 1000px;
+        
+        margin: auto;
+        
+        text-align: center;
+        font-size: 17px;
+        padding-top: 30px;
+        
+        
+    
+    }
+    .item img {
+        /* da je samo height a ne max height jos bi se vise smanjilo*/
+        max-width: 280px;
+        max-height: 200px;
+        
+    }
+
+}
+
+
+
+/* FLEX CONTAINER */
+
+.container {
+    background-color: /*#b2abb4*/ #595957; /*PROMIJENILA BOJU*/
+    color:white;
+    display: flex;   /* stavi sve items jedno do drugog, a da je block bili bi jedna ispod druge */
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 20px;
+    padding-bottom: 50px;
+    padding-top:20px;
+    
+}
+
+/* BOXES INCLUDING IMAGES AND SPANS */
+
+.item {
+    width: 300px;
+    height: 200px;
+    border: 1px solid white;
+    margin: 30px;  /* prostor okolo */
+    margin-bottom: 70px;
+
+}
+
+/* uklopi slike u ovaj container item napisan gore*/
+
+.item img {
+    width: 300px;
+    height: 200px;
+    
+}
+
+/* !! Kad se smanji velicina ekrana slike idu u drugi red jedna ispod druge poredane da se sve vide */
+
+#wrap {
+    flex-wrap: wrap;
+}
+
+
+/*POZNATI KAFICI*/
+
+/* BACKGROUND - SLIKA KAVE*/
+
+#kafici {
+    max-width: /*1200px*/ 100%;
+    
+    margin: auto;
+    padding-top: 50px;
+    text-align: center;
+    background-image: url("images/img-locations-background.jpg");
+    background-size: cover;
+    
+    height: 500px;
+    padding-bottom: 10px;
+    
+    
+    
+}
+
+/* za manje velicine ekrana - ne vidi se citava slika, ode u desno pa moram listat da vidim citavu sliku - stavit size na cover i height na max content da smanjim visinu kad se smanji velicina ekrana i font slova, max height uskladi visinu sa sadrzajem i vidi se cijela slika*/
+
+
+@media only screen and (max-width: 1100px) {
+    
+    
+    #kafici {
+        max-width: 1200px;
+        
+        margin: auto;
+        padding-top: 50px;
+        text-align: center;
+        background-image: url("images/img-locations-background.jpg");
+        background-size: cover;
+    
+        height: max-content;
+        padding-bottom: 10px;
+        background-position: center;
+        
+        
+        
+    }
+    
+}
+
+
+
+/* FLEX CONTAINER FOR LOCATION FLEX ITEMS */
+
+.container-kafici {
+    display: flex;  /* jedno do drugog a ne jedno ispod drugog i postavimo velicinu tog okvira u .items*/
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+    text-align: center;
+   
+    top: 50px;
+
+
+}
+
+/* FLEX ITEMS .LOCATION */ 
+
+.location {
+    width: 300px;
+    height: 200px;
+    border: 1px solid white;
+    margin: 30px;
+    margin-bottom: 70px;
+    line-height: 2;
+    font-size: 19px;
+    background-color: black;
+    color:white;
+    
+    
+
+}
+
+.bijelo {
+    color:white;
+}
+
+
+
+
+.location span {
+    /*odvojit span-ove da ne budu na istoj liniji */
+    display: block;
+}
+
+
+#wrap-kafici {
+    flex-wrap: wrap;
+}
+
+/* FOOTER CONTACT INFO */
+
+#footer {
+    text-align: center;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    height: 200px;
+    font-size: 17px;
+    color: white;
+}
+
+#footer h5 {
+    /* odvojiti malo email i tel */
+    margin: 20px;
+    
+}
+
+.follow{
+    /*padding: 10px 0px;*/
+    position: relative;
+    text-align: center;
+    width: 100%;
+    margin: 40px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+    
+}
+
+.follow-button img  {
+    border-radius : 50%;
+    width: 45px;
+    height: 45px;
+    margin: 10px;
+    
+}
+
+.follow-button {
+    margin: 20px;
+    
+}
+
+.povijest {
+    margin-top: 1px;
+}
+
+/* FOOTER COPYRIGHT */
+
+#copyright  {
+    text-align: left;
+    margin: 20px;
+    font-size: 15px;
+    color:white;
+    padding-top: 20px;
+}

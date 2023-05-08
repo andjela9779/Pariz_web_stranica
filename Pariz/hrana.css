@@ -1,0 +1,342 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    color: black;
+    background-color: #595957;
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;  /* da nav i logo budu u nizu jedan do drugog, a ne jedan ispod drugog */
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  /* Header - nav i logo */
+  
+  header {
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    height: 69px;
+    background-color: #595957;
+    border-bottom: 1px solid seashell;
+    align-items: center;
+    
+   
+  }
+
+.logo {
+    width: 70px;
+    height: 50px;
+}
+  nav {
+      text-align: right;
+      flex-grow: 1; /* kad sam dodala ovo, nav zauzme vise prostora, naraste u odnosu na druge elemente pa pomakne logo na drugi kraj */
+      color:white;
+      
+  }
+nav span {
+    display: inline-block;
+    
+    list-style-type: none;
+    padding: 10px 20px;
+    margin: 10px;
+}
+
+ a {
+    text-decoration: none;
+    color: seashell;
+    
+    
+    
+}
+
+a.hover:hover {
+    background: white;
+    color: gray;
+}
+
+header img {
+    padding-left: 10px;
+    
+    height: 50px;
+    margin: 10px;
+
+    
+    
+}
+
+@media only screen and (max-width: 480px) {
+    header {
+        width: 100%;
+        height: auto;
+    }
+    nav {
+        justify-content: center;
+        text-align: center;
+    }
+    nav span {
+        display:block;
+        
+        
+        list-style-type: none;
+        padding: 10px 10px;
+    }
+}
+@media only screen and (max-width: 768px) and (min-width: 605px){
+    header {
+        width: 100%;
+        height: auto;
+    }
+    nav {
+        justify-content: center;
+        text-align: center;
+    }
+    nav span {
+        display:block;
+        
+        
+        list-style-type: none;
+        padding: 10px 10px;
+    }
+}
+
+
+
+
+.main {
+    width: /*1200px*/ 100%;
+    padding-top: 69px;
+    opacity: 0.9;
+  /* centers the content */
+  margin: auto;
+
+}
+
+
+.main-content {
+    margin: 0 auto; 
+    padding: 40px;
+    text-align: center;
+    width: 70%;
+    position: relative;
+    top: 170px;
+    
+    
+    
+  
+  }
+
+.welcome {
+    margin:auto;
+}
+
+/*Banner*/
+
+/* BANNER BACKGROUND */
+
+#banner {
+    height: 600px;
+    background-image: url("images/hrana-pozadina.jpg");
+    background-size:cover;
+    background-position:center;
+    width: 100%;
+    opacity:0.9;
+    
+    margin: auto;
+    
+    
+    
+    
+    
+   
+    
+    
+}
+
+/* BANNER CONTENT - TITLE */
+
+#banner .content {
+    /* centrira*/
+    margin: auto;
+    background-color: #595957;
+    width: 100%;
+    align-items: center;
+    padding: 7px;
+    line-height:1.5;
+    text-align: center;
+    height: auto;
+    border: 4px solid white;
+    color: white;
+    
+    
+    
+    
+    
+
+}
+
+#uvod {
+    padding: 50px;
+    color: white;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+
+#uvod p {
+    padding:10px;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+}
+
+
+
+@media only screen and (max-width: 480px) {
+    .main {
+        width: 100%;
+        padding-top: 69px;
+        opacity: 0.9;
+        /* centers the content */
+        margin: auto;
+    
+    }
+}
+@media only screen and (max-width: 768px) {
+    .main {
+        width: 100%;
+        padding-top: 69px;
+        opacity: 0.9;
+        /* centers the content */
+        margin: auto;
+    
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .main {
+        width: 100%;
+        padding-top: 69px;
+        opacity: 0.9;
+        /* centers the content */
+        margin: auto;
+    
+    }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1152px) {
+    .main {
+        width: 100%;
+        padding-top: 69px;
+      opacity: 0.9;
+      /* centers the content */
+      margin: auto;
+    
+    }
+}
+
+/* mob */
+@media only screen and (max-width: 768px) {
+    header {
+        width: 100%;
+        height: auto;
+        flex-shrink: 2;
+    }
+    nav {
+        justify-content: center;
+        text-align: center;
+    }
+    nav span {
+        display:inline-block;
+        font-size: 17px;
+        
+        list-style-type: none;
+        padding: auto;
+    }
+    body {
+        font-size: 17px;
+    }
+    
+}
+
+#hrana-tekst {
+    color:white;
+}
+
+
+
+.hrana-slike{
+    height: 200px;
+    padding:20px;
+    
+}
+
+.hrana-naslov {
+    padding: 20px;
+    color: white;
+}
+    
+    
+    /* FOOTER CONTACT INFO */
+
+#footer {
+    text-align: center;
+    margin: auto;
+    padding-top: 90px;
+    padding-bottom: 10px;
+    height: 200px;
+    font-size: 17px;
+    color: white;
+    margin-top: 50px;
+}
+
+#footer h5 {
+    
+    margin: 20px;
+    
+}
+
+.follow{
+    /*padding: 10px 0px;*/
+    position: relative;
+    text-align: center;
+    width: 100%;
+    margin: 40px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+    
+}
+
+.follow-button img  {
+    border-radius : 50%;
+    width: 45px;
+    height: 45px;
+    margin: 10px;
+    
+}
+
+.follow-button {
+    margin: 20px;
+    
+}
+
+.povijest {
+    margin-top: 1px;
+}
+
+/* FOOTER COPYRIGHT */
+
+#copyright  {
+    text-align: left;
+    margin: 20px;
+    font-size: 15px;
+    color:white;
+    padding-top: 20px;
+}
